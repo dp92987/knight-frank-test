@@ -1,6 +1,8 @@
 import json
 
 import psycopg2
+import psycopg2.extras
+
 
 with open('secret.json') as file:
     secret = json.load(file)
@@ -14,14 +16,19 @@ conn = psycopg2.connect(dbname=db_name, host=db_host, user=db_user, password=db_
 
 
 def get_realties():
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM realties;')
-    query = cur.fetchall()
-    return query
-
-
-def get_realty_by_id(realty_id):
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM realties WHERE id=%s;', (realty_id, ))
-    query = cur.fetchone()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    sql = '''
+          SELECT DISTINCT r.id, r.name, r.area, r.type
+          FROM realties as r
+          LEFT JOIN realty_metros as rm on r.id=rm.realty_id
+          LEFT JOIN metros as m on rm.metro_id=m.id;
+          '''
+    try:
+        cur.execute(sql)
+        query = cur.fetchall()
+    except:
+        conn.rollback()
+        raise
+    finally:
+        cur.close()
     return query

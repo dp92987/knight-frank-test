@@ -1,18 +1,12 @@
-from .app import app, db
+from flask import render_template
+
+from .app import app
+from . import database as db
 
 
 @app.route('/')
-@app.route('/catalog.html')
+@app.route('/catalog/')
 def catalog():
     realties = db.get_realties()
-    result = '<html>'
-    for realty in realties:
-        result = f'{result}<a href=realty/{realty[0]}>{realty}</a><br>'
-    result = f'{result}</html>'
-    return result
-
-
-@app.route('/realty/<realty_id>')
-def realty(realty_id):
-    result = db.get_realty_by_id(realty_id)
-    return str(result)
+    response = render_template('catalog.html', realties=realties)
+    return response

@@ -3,6 +3,15 @@
         <title>Realty Catalog</title>
     </head>
     <body>
+        {% from "_formhelpers.html" import render_field %}
+        <form method=get>
+          <dl>
+            {{ render_field(form.area) }}
+            {{ render_field(form.floor) }}
+            {{ render_field(form.metro) }}
+          </dl>
+          <p><input type=submit value="Найти">
+        </form>
         {% if realties %}
             {% for realty in realties -%}
             <div><b><a href="realty/{{realty.id}}">{{ realty.name }}</a></b><br>{{ realty.area }}м², {{ realty.type }}<br><br></div>

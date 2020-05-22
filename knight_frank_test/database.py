@@ -18,13 +18,14 @@ conn = psycopg2.connect(dbname=db_name, host=db_host, user=db_user, password=db_
 def get_realties(area=None, floor=None, metro=None):
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     sql = '''
-          SELECT DISTINCT r.id, r.name, r.area, r.type
-          FROM realties as r
-          LEFT JOIN realty_metros as rm on r.id=rm.realty_id
-          LEFT JOIN metros as m on rm.metro_id=m.id
-          WHERE (%(area)s is null or r.area=%(area)s)
-            AND (%(floor)s is null or r.floor=%(floor)s)
-            AND (%(metro)s is null or m.name ILIKE LOWER(%(metro)s));
+          SELECT DISTINCT r.id, r.name, r.area, t.name as type
+          FROM realties AS r
+          LEFT JOIN types AS t ON r.type=t.id
+          LEFT JOIN realty_metros AS rm ON r.id=rm.realty_id
+          LEFT JOIN metros AS m ON rm.metro_id=m.id
+          WHERE (%(area)s IS NULL OR r.area=%(area)s)
+            AND (%(floor)s IS NULL OR r.floor=%(floor)s)
+            AND (%(metro)s IS NULL OR m.name ILIKE %(metro)s);
           '''
     kwargs = {'area': area, 'floor': floor, 'metro': f'%{metro}%' if metro else None}
     try:

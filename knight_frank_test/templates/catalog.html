@@ -10,7 +10,7 @@
         </form>
         {% if realties %}
             {% for realty in realties -%}
-            <div><b><a href="item/{{realty.id}}">{{ realty.name }}</a></b><br>{{ realty.area }}м², {{ realty.type }}<br><br></div>
+            <div><b><a href="/item/{{realty.id}}">{{ realty.rooms }}-комн. {{ realty.type }}, {{ realty.area }}м²</a></b><br>{{ realty.address }}<br><br></div>
             {%- endfor %}
         {% endif %}
     </body>

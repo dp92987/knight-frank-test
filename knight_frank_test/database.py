@@ -18,7 +18,7 @@ conn = psycopg2.connect(dbname=db_name, host=db_host, user=db_user, password=db_
 def get_realties(area=None, floor=None, metro=None):
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     sql = '''
-          SELECT DISTINCT r.id, r.name, r.area, t.name as type
+          SELECT DISTINCT r.id, r.name, r.address, r.rooms, r.area, t.name as type
           FROM realties AS r
           LEFT JOIN types AS t ON r.type=t.id
           LEFT JOIN realty_metros AS rm ON r.id=rm.realty_id
@@ -42,7 +42,7 @@ def get_realties(area=None, floor=None, metro=None):
 def get_realty(realty_id):
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     sql = '''
-          SELECT r.id, r.name, r.address, r.floor, r.area, t.name as type
+          SELECT r.id, r.name, r.address, r.rooms, r.floor, r.area, t.name as type
           FROM realties AS r
           LEFT JOIN types AS t ON r.type=t.id
           LEFT JOIN realty_metros AS rm ON r.id=rm.realty_id

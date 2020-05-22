@@ -40,8 +40,8 @@ python3 run.py
 
 ## Schema
 
-Database schema and demo data in stored in ```sql``` folder.
+Database schema and demo data is stored in ```sql``` folder.
 
 ## Demo
 
-http://twentythree.ru:5000/K
+http://twentythree.ru:5000

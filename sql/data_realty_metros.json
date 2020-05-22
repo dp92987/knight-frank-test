@@ -1,0 +1,217 @@
+[
+  {
+    "id": 1,
+    "realty_id": 1,
+    "metro_id": 3
+  },
+  {
+    "id": 2,
+    "realty_id": 2,
+    "metro_id": 1
+  },
+  {
+    "id": 3,
+    "realty_id": 2,
+    "metro_id": 2
+  },
+  {
+    "id": 4,
+    "realty_id": 3,
+    "metro_id": 134
+  },
+  {
+    "id": 5,
+    "realty_id": 4,
+    "metro_id": 118
+  },
+  {
+    "id": 6,
+    "realty_id": 4,
+    "metro_id": 47
+  },
+  {
+    "id": 7,
+    "realty_id": 4,
+    "metro_id": 230
+  },
+  {
+    "id": 8,
+    "realty_id": 5,
+    "metro_id": 5
+  },
+  {
+    "id": 9,
+    "realty_id": 6,
+    "metro_id": 221
+  },
+  {
+    "id": 10,
+    "realty_id": 7,
+    "metro_id": 118
+  },
+  {
+    "id": 11,
+    "realty_id": 8,
+    "metro_id": 307
+  },
+  {
+    "id": 12,
+    "realty_id": 9,
+    "metro_id": 108
+  },
+  {
+    "id": 13,
+    "realty_id": 10,
+    "metro_id": 272
+  },
+  {
+    "id": 14,
+    "realty_id": 10,
+    "metro_id": 268
+  },
+  {
+    "id": 15,
+    "realty_id": 11,
+    "metro_id": 294
+  },
+  {
+    "id": 16,
+    "realty_id": 12,
+    "metro_id": 168
+  },
+  {
+    "id": 17,
+    "realty_id": 13,
+    "metro_id": 130
+  },
+  {
+    "id": 18,
+    "realty_id": 14,
+    "metro_id": 80
+  },
+  {
+    "id": 19,
+    "realty_id": 14,
+    "metro_id": 189
+  },
+  {
+    "id": 20,
+    "realty_id": 15,
+    "metro_id": 188
+  },
+  {
+    "id": 21,
+    "realty_id": 16,
+    "metro_id": 292
+  },
+  {
+    "id": 22,
+    "realty_id": 17,
+    "metro_id": 227
+  },
+  {
+    "id": 23,
+    "realty_id": 18,
+    "metro_id": 236
+  },
+  {
+    "id": 24,
+    "realty_id": 19,
+    "metro_id": 75
+  },
+  {
+    "id": 25,
+    "realty_id": 20,
+    "metro_id": 195
+  },
+  {
+    "id": 26,
+    "realty_id": 21,
+    "metro_id": 184
+  },
+  {
+    "id": 27,
+    "realty_id": 22,
+    "metro_id": 264
+  },
+  {
+    "id": 28,
+    "realty_id": 22,
+    "metro_id": 49
+  },
+  {
+    "id": 29,
+    "realty_id": 22,
+    "metro_id": 307
+  },
+  {
+    "id": 30,
+    "realty_id": 23,
+    "metro_id": 114
+  },
+  {
+    "id": 31,
+    "realty_id": 24,
+    "metro_id": 110
+  },
+  {
+    "id": 32,
+    "realty_id": 25,
+    "metro_id": 285
+  },
+  {
+    "id": 33,
+    "realty_id": 26,
+    "metro_id": 306
+  },
+  {
+    "id": 34,
+    "realty_id": 27,
+    "metro_id": 142
+  },
+  {
+    "id": 35,
+    "realty_id": 28,
+    "metro_id": 87
+  },
+  {
+    "id": 36,
+    "realty_id": 29,
+    "metro_id": 254
+  },
+  {
+    "id": 37,
+    "realty_id": 30,
+    "metro_id": 182
+  },
+  {
+    "id": 38,
+    "realty_id": 31,
+    "metro_id": 57
+  },
+  {
+    "id": 39,
+    "realty_id": 32,
+    "metro_id": 287
+  },
+  {
+    "id": 40,
+    "realty_id": 32,
+    "metro_id": 213
+  },
+  {
+    "id": 41,
+    "realty_id": 32,
+    "metro_id": 247
+  },
+  {
+    "id": 42,
+    "realty_id": 32,
+    "metro_id": 56
+  },
+  {
+    "id": 43,
+    "realty_id": 32,
+    "metro_id": 231
+  }
+]

@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, abort
 from wtforms import Form, IntegerField, StringField, validators
 
 from .app import app
@@ -23,3 +23,13 @@ def catalog():
     realties = db.get_realties(**args)
     response = render_template('catalog.html', realties=realties, form=search_form)
     return response
+
+
+@app.route('/item/<realty_id>/')
+def item(realty_id):
+    realty = db.get_realty(realty_id)
+    if realty:
+        metros = [metro[0] for metro in db.get_metros(realty_id)]
+        return render_template('item.html', realty=realty, metros=metros)
+    else:
+        return abort(404)

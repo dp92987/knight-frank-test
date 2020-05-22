@@ -14,7 +14,7 @@
         </form>
         {% if realties %}
             {% for realty in realties -%}
-            <div><b><a href="realty/{{realty.id}}">{{ realty.name }}</a></b><br>{{ realty.area }}м², {{ realty.type }}<br><br></div>
+            <div><b><a href="item/{{realty.id}}">{{ realty.name }}</a></b><br>{{ realty.area }}м², {{ realty.type }}<br><br></div>
             {%- endfor %}
         {% endif %}
     </body>

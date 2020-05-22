@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Realty Catalog - {{ realty.id }}</title>
+    </head>
+    <body>
+        <h1>{{ realty.name }}</h1>
+        <div>Адрес: {{ realty.address }}</div>
+        <div>Этаж: {{ realty.floor  }}</div>
+        <div>Площадь: {{ realty.area  }}</div>
+        <div>Тип: {{ realty.type  }}</div>
+        <div>Метро: {{ metros | join(', ') }}</div>
+    </body>
+</html>

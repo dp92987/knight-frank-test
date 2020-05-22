@@ -12,10 +12,14 @@ db_user = secret['db_user']
 db_password = secret['db_password']
 db_name = secret['db_name']
 
-conn = psycopg2.connect(dbname=db_name, host=db_host, user=db_user, password=db_password)
+
+def get_connection():
+    conn = psycopg2.connect(dbname=db_name, host=db_host, user=db_user, password=db_password)
+    return conn
 
 
 def get_realties(area=None, floor=None, metro=None):
+    conn = get_connection()
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     sql = '''
           SELECT DISTINCT r.id, r.name, r.address, r.rooms, r.area, t.name as type
@@ -36,10 +40,12 @@ def get_realties(area=None, floor=None, metro=None):
         raise
     finally:
         cur.close()
+        conn.close()
     return query
 
 
 def get_realty(realty_id):
+    conn = get_connection()
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     sql = '''
           SELECT r.id, r.name, r.address, r.rooms, r.floor, r.area, t.name as type
@@ -58,10 +64,12 @@ def get_realty(realty_id):
         raise
     finally:
         cur.close()
+        conn.close()
     return query
 
 
 def get_metros(realty_id):
+    conn = get_connection()
     cur = conn.cursor()
     sql = '''
           SELECT m.name
@@ -78,4 +86,5 @@ def get_metros(realty_id):
         raise
     finally:
         cur.close()
+        conn.close()
     return query

@@ -8,12 +8,11 @@ from . import database as db
 class SearchForm(Form):
     area = IntegerField('Площадь', validators=[validators.Optional(), validators.NumberRange(min=1, max=10000)])
     floor = IntegerField('Этаж', validators=[validators.Optional(), validators.NumberRange(min=1, max=1000)])
-    metro = StringField('Найти', validators=[validators.Optional(), validators.Length(max=100)],
+    metro = StringField('Метро', validators=[validators.Optional(), validators.Length(max=100)],
                         filters=[lambda s: s or None])
 
 
 @app.route('/')
-@app.route('/catalog/')
 def catalog():
     search_form = SearchForm(request.args)
     if search_form.validate():

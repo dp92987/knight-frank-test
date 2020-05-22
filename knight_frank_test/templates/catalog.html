@@ -5,12 +5,8 @@
     <body>
         {% from "_formhelpers.html" import render_field %}
         <form method=get>
-          <dl>
-            {{ render_field(form.area) }}
-            {{ render_field(form.floor) }}
-            {{ render_field(form.metro) }}
-          </dl>
-          <p><input type=submit value="Найти">
+          {{ render_field(form.area) }} {{ render_field(form.floor) }} {{ render_field(form.metro) }}
+          <input type=submit value="Найти">
         </form>
         {% if realties %}
             {% for realty in realties -%}

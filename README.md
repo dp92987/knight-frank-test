@@ -33,12 +33,22 @@ Create ```secret.json``` with database credentials:
 }
 ```
 
+Create database schema:
+```bash
+python3 manage.py create_schema
+```
+
+Copy demo data:
+```bash
+python3 manage.py copy_demo_data
+```
+
 Run application:
 ```bash
 python3 run.py
 ```
 
-## Schema
+## Schema and demo data
 
 Database schema and demo data is stored in ```sql``` folder.
 

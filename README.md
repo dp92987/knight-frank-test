@@ -10,6 +10,7 @@ Simple realty catalog.
   * flask
   * wtforms
   * psycopg2
+  * gunicorn
 * PostgreSQL
 
 ## Installation
@@ -54,4 +55,4 @@ Database schema and demo data is stored in ```sql``` folder.
 
 ## Demo
 
-http://twentythree.ru:5000
+http://kft.twentythree.ru

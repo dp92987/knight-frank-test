@@ -24,7 +24,7 @@ def catalog():
     return response
 
 
-@app.route('/item/<realty_id>/')
+@app.route('/item/<realty_id>')
 def item(realty_id):
     realty = db.get_realty(realty_id)
     if realty:

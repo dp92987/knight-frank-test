@@ -55,4 +55,4 @@ Database schema and demo data is stored in ```sql``` folder.
 
 ## Demo
 
-http://kft.twentythree.ru
+https://twentythree.ru/KnightFrankTest/

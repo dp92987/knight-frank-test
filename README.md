@@ -21,7 +21,7 @@ git clone https://github.com/dp92987/KnightFrankTest.git
 cd KnightFrankTest
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Create ```secret.json``` with database credentials:
@@ -51,7 +51,7 @@ python3 run.py
 
 ## Schema and demo data
 
-Database schema and demo data is stored in ```sql``` folder.
+Database schema and demo data are stored in ```sql``` folder.
 
 ## Demo
 

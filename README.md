@@ -1,4 +1,4 @@
-# KnightFrankTest
+# Knight Frank Test
 Test case for Knight Frank.
 
 ## Description
@@ -6,19 +6,18 @@ Test case for Knight Frank.
 Simple realty catalog.
 
 ## Built With
-* Python 3.8
+* Python 3
   * flask
   * wtforms
   * psycopg2
-  * gunicorn
 * PostgreSQL
 
 ## Installation
 
 Clone, create virtual environment and install dependencies:
 ```bash
-git clone https://github.com/dp92987/KnightFrankTest.git
-cd KnightFrankTest
+git clone https://github.com/dp92987/knight-frank-test.git
+cd knight-frank-test
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -55,4 +54,4 @@ Database schema and demo data are stored in ```sql``` folder.
 
 ## Demo
 
-https://twentythree.ru/KnightFrankTest/
+https://deltapapa.io/knight-frank-test/
